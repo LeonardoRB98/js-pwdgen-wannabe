@@ -1,0 +1,69 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+.container {
+  width: 100%;
+  height: 100vh;
+  background-image: url('https://images.hdqwalls.com/download/minimal-sunset-landscape-4k-w5-1920x1080.jpg');
+  /* filter: blur(10px); */
+  background-size: cover;
+  display: flex;
+  position: relative;
+}
+.filter {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-image: url('https://www.muralswallpaper.com/app/uploads/Blue-Illustrated-Landscape-Mountains-Wallpaper-Mural.jpg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+}
+.filter:active {
+  display: none;
+}
+.box {
+  width: 700px;
+  height: 200px;
+  background-color: coral;
+  border-radius: 20px;
+  position: absolute;
+  top: calc(50% - 100px);
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: sassi 1s linear forwards;
+}
+@keyframes sassi {
+ from {
+   top: calc(50% - 100px);
+   left: 0;
+ }
+
+ to {
+   top: calc(50% - 100px);
+   left: calc(50% - 350px);
+ }
+}
+ .title {
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  top: 10px;
+  animation: top-to-bottom 1s linear forwards;
+ }
+@keyframes top-to-bottom {
+  from {
+    top: 10px;
+  }
+  to {
+    top: 30%;
+  }
+}
+.title h2 {
+  color: white;
+  font-weight: 700;
+}
